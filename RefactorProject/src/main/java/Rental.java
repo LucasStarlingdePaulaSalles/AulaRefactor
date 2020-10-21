@@ -35,4 +35,10 @@ public class Rental {
         }
         return thisAmount;
   }
+     public int getFrequentRenterPoints() { 
+         int number = 1;
+         if ((this.getMovie().getPriceCode() == Movie.NEW_RELEASE) &&
+         this.getDaysRented() > 1) number ++;
+      return number;
+   }
 }
