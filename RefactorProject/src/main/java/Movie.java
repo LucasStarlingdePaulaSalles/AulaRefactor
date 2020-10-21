@@ -40,10 +40,7 @@ public class Movie {
          return _price.getCharge(daysRented);
     }
    
-   public int getFrequentRenterPoints(int daysRented){
-       int number = 1;
-         if ((this.getPriceCode() == Movie.NEW_RELEASE) &&
-         daysRented > 1) number ++;
-      return number;
+   public int getFrequentRenterPoints(int daysRented) {
+      return _price.getFrequentRenterPoints(daysRented);
    }
 }
